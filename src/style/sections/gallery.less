@@ -1,0 +1,105 @@
+.gallery {
+	&__wrap {
+		background-color: #fafafa;
+		box-shadow: inset 0 4px 16px -4px rgba(0,0,0,0.22);
+	}
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	&__item {
+		width: 100%;
+		max-width: 293px;
+		position: relative;
+		margin: 0 5px 30px;
+		&--video {
+			position: relative;
+			&:before {
+				content: '';
+				position: absolute;
+				top: 15px;
+				right: 10px;
+				.sprite(@video);
+				z-index: 1000;
+			}
+		}
+	}
+	&__img {
+		position: relative;
+		&:after {
+			content: '';
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0,0,0,0.4);
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		img {
+			width: 100%;
+		}
+	}
+	&__info	{
+		position: absolute;
+		width: 100%;
+		left: 0;
+		bottom: 10px;
+		color: #ffffff;
+		font-size: 17px;
+	}
+	&__row {
+		display: flex;
+		margin-top: 20px;
+		padding: 0 10px;
+		&:last-child {
+			justify-content: center;
+		}
+	}
+	&__day {
+		min-width: 80px;
+		margin-right: 20px;
+	}
+	&__like {
+		min-width: 80px;
+		margin-right: 20px;
+		line-height: 20px;
+		font-weight: bold;
+		&--icon {
+			position: relative;
+			padding-left: 28px;
+			&:before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				.sprite(@like)
+			}
+		}
+	}
+	&__comment {
+		font-weight: bold;
+		line-height: 20px;
+		&--icon {
+			position: relative;
+			padding-left: 25px;
+			&:before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				.sprite(@comment)
+			}
+		}
+	}
+	&-button {
+		padding: 10px 30px;
+		background: none;
+		font-size: 12px;
+		text-transform: uppercase;
+		border: 1px solid #444;
+		border-radius: 20px;
+		cursor: pointer;
+		&__wrap {
+			text-align: center;
+		}
+	}
+}

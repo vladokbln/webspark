@@ -1,0 +1,175 @@
+.header {
+	padding: 0 70px;
+	&__wrap {
+		padding: 5px 0 30px;
+	}
+	&-logo {
+		display: inline-block;
+		&__link {
+			display: block;
+		}
+	}
+	&-flex {
+		display: inline-flex;
+		flex-wrap: wrap;
+		width: 100%;
+		max-width: 450px;
+		margin-left: 110px;
+		margin-top: 40px;
+		vertical-align: top;
+	}
+}
+.header-profile {
+	&__top {
+		margin-bottom: 20px;
+	}
+	&__name {
+		display: inline-block;
+		font-size: 35px;
+		color: #262626;
+	}
+	&__datastart {
+		display: inline-block;
+		margin-left: 20px;
+		padding: 0 10px;
+		line-height: 30px;
+		color: #4090db;
+		border: 1px solid #4090db;
+		border-radius: 5px; 
+		font-family: @helveticaNeue;
+		vertical-align: bottom;
+	}
+	&__status {
+		display: flex;
+	}
+	&__info {
+		font-size: 17px;
+		margin-right: 30px;
+		&:last-child {
+			margin-right: 0;
+		}
+		span {
+			font-weight: bold;
+		}
+	}
+
+}
+.header-date {
+	width: 100%;
+	margin-top: 25px;
+	label {
+		font-size: 17px;
+		font-family: 'Arial', sans-serif;
+	}
+	&__start {
+		display: inline-block;
+		position: relative;
+		width: 100%;
+		max-width: 180px;
+		margin-left: 15px;
+		input {
+			line-height: 30px;
+			width: 100%;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			padding-left: 10px;
+		}
+	}
+	&__end {
+		display: inline-block;
+		position: relative;
+		width: 100%;
+		max-width: 180px;
+		margin-left: 25px;
+		input {
+			line-height: 30px;
+			width: 100%;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			padding-left: 10px;
+		}
+	}
+	&__close {
+		position: absolute;
+		top: 1px;
+		right: 32px;
+		background-color: #ebebeb;
+		border-left: 1px solid #ccc;
+		padding: 9px;
+		cursor: pointer;
+		i {
+			.sprite(@close);
+			display: block;
+		}
+	}
+	&__range {
+		position: absolute;
+		top: 1px;
+		right: 1px;
+		background-color: #ebebeb;
+		border-left: 1px solid #ccc;
+		padding: 6px;
+		cursor: pointer;
+		i {
+			.sprite(@data);
+			display: block;
+		}
+	}
+	.qs-datepicker-container {
+		border-color: #b8b8b8;
+		margin-top: 3px;
+		overflow: inherit;
+		&:before, &::after {
+			content: '';
+			position: absolute;
+			left: 20px;
+			top: -10px;
+			border: 5px solid transparent;
+			border-bottom-color: transparent;
+			border-bottom-style: solid;
+			border-bottom-width: 10px;
+			border-bottom: 5px solid #b8b8b8;
+		}
+		&:after {
+			border-bottom: 5px solid #fff;
+			top: -9px;
+		}
+	}
+	.qs-datepicker {
+		.qs-controls {
+			background: none;
+		}
+		.qs-square.qs-day {
+			color: #444;
+		}
+		.qs-square.qs-active.qs-current {
+			background: #4090db;
+			color: #fff;
+			text-decoration: none;
+			border: none;
+		}
+		.qs-square.qs-active {
+			background: #4090db;
+			color: #fff;
+		}
+		.qs-square.qs-current {
+			font-weight: normal;
+			background: inherit;
+			color: inherit;
+		}
+		.qs-square.qs-disabled {
+			background: inherit;
+			color: inherit;
+		}
+	}
+	.qs-arrow.qs-left::after {
+		border: none;
+		display: block;
+		.sprite(@arrow-left);
+	}
+	.qs-arrow.qs-right::after {
+		border: none;
+		display: block;
+		.sprite(@arrow-right);
+	}
+}

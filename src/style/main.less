@@ -1,0 +1,67 @@
+@import 'fonts.less';
+@import 'libs.less';
+@import 'vars.less';
+@import '../img/sprite/sprite';
+@import 'datepicker.min.css';
+
+html { 
+  line-height: 1;
+  font-size: 14px;
+}
+
+body {
+	width: 100%;
+	font-family: @mainFont;
+	color: @mainColor;
+	margin: 0;
+}
+h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+}
+ul,li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}  
+p {
+  margin: 0;
+}  
+a {
+  text-decoration: none;
+  color: black;
+}
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}  
+textarea {
+  resize: none;
+}
+section {
+  position: relative;
+  padding: 40px 0;
+}
+input,
+select,
+button {
+  outline: none;
+}
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+.container {
+  width: 100%;
+  max-width: 970px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+@import 'modules/header';
+@import 'sections/gallery';
+
+@import 'modules/footer';
+@import 'media';
